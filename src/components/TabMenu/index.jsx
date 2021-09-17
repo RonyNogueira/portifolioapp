@@ -17,8 +17,8 @@ const TabMenu = ({data}) =>{
             </div>
             <div className="cards">
                 {
-                     data[id]?.posts.map((post)=>(
-                        <a href={post.link} className="card" style={{backgroundImage:`url(${post.background})`}}>
+                     data[id]?.posts.map((post, index)=>(
+                        <a key={index} href={post.link} className="card" style={{backgroundImage:`url(${post.background})`}}>
                             <h3>{post.title}</h3>
                         </a>
                      ))
